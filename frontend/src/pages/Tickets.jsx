@@ -22,7 +22,6 @@ useEffect(()=>{
 
     useEffect(()=>{
 dispatch(getTickets())
-console.log(tickets);
     },[dispatch])
     if(isLoading){
         return <Spinner/>

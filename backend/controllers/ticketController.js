@@ -34,7 +34,7 @@ const getTicket=asyncHandler( async(req,res)=>{
     }
     if(ticket.user.toString() !== req.user.id){
       res.status(401)
-      throw new Error('Not Authorized')
+      throw new Error('Error in ticket Controller')
     }
      res.status(200).json(ticket)
   })

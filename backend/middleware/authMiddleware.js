@@ -15,15 +15,15 @@ try {
 
     next()
 } catch (error) {
-    console.log(error);
+    console.log(token);
     res.status(401)
-    throw new Error('Not authorized')
+    throw new Error('there is an error')
 }
 }
 if(!token){
     res.status(401);
-
-    throw new Error('Not authorized')
+    console.log('token missing ');
+    throw new Error('missing token')
 }
 })
 module.exports={protect}
